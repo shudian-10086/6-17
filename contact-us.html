@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Spin The Wheel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/index.css">
+</head>
+<body>
+    <nav class="navbar-industrial">
+        <div class="navbar-brand">
+             <h1><a href="index.html">Spin The Wheel</a></h1>
+        </div>
+        <button class="navbar-toggler" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarIndustrialNav">
+            <span class="toggler-icon"></span>
+            <span class="toggler-icon"></span>
+            <span class="toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" id="navbarIndustrialNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="index.html" class="nav-link">NEW</a></li>
+                <li class="nav-item"><a href="index.html#new-section" class="nav-link">Use Case</a></li>
+                <li class="nav-item"><a href="index.html#faq-section" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="user-guide.html" class="nav-link js-scroll-trigger">User Guide</a></li>
+                 <li class="nav-item"><a href="about-us.html" class="nav-link">about</a></li>
+                <li class="nav-item"><a href="contact-us.html" class="nav-link">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="manual-section-wrapper">
+        <div class="manual-section">
+            <h2>Contact Us</h2>
+
+            <p>We'd love to hear from you! Whether you have a question about our Lucky Wheel / Name Picker, a suggestion for a new feature, a bug report, or just want to say hello, please feel free to reach out.</p>
+
+            <h3>Get in Touch</h3>
+            <p>The best way to contact us is via email:</p>
+            <p class="contact-info">
+                <strong>Email:</strong> <a href="mailto:chongzhidatech@gmail.com" style="color:#ccc">chongzhidatech@gmail.com</a>
+            </p>
+            <p>We aim to respond to all inquiries within [e.g., 24-48 business hours / a few days].</p>
+
+            <h3>Feedback & Suggestions</h3>
+            <p>Your feedback is invaluable to us as we strive to make this tool better. If you have ideas on how we can improve or features you'd like to see, please don't hesitate to share them.</p>
+
+            <h3>Reporting Issues</h3>
+            <p>If you encounter any bugs or technical issues while using the wheel, please let us know. To help us diagnose the problem quickly, please include the following information if possible:</p>
+            <ul>
+                <li>A clear description of the issue.</li>
+                <li>Steps to reproduce the problem.</li>
+                <li>The web browser and version you are using (e.g., Chrome 105, Firefox 104).</li>
+                <li>Your operating system (e.g., Windows 10, macOS Monterey, Android 12).</li>
+                <li>Screenshots, if applicable, can be very helpful.</li>
+            </ul>
+
+            <h3>Send Us a Message Directly</h3>
+            <form action="contact-us.html" method="POST" class="contact-form">
+                <div>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+
+
+            <p>Thank you for your interest in Spin The Wheel!</p>
+
+        </div>
+    </div>
+
+<footer>
+    <p>© 2025 Spin The Wheel. All Rights Reserved.</p>
+</footer>
+    <script src="./static/js/userguide.js"></script>
+</body>
+</html>

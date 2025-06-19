@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Guide - Spin The Wheel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/index.css">
+</head>
+<body>
+    <nav class="navbar-industrial">
+        <div class="navbar-brand">
+             <h1><a href="index.html">Spin The Wheel</a></h1> <!-- Link back to main app -->
+        </div>
+        <button class="navbar-toggler" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarIndustrialNav">
+            <span class="toggler-icon"></span>
+            <span class="toggler-icon"></span>
+            <span class="toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" id="navbarIndustrialNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="index.html" class="nav-link">NEW</a></li>
+                <li class="nav-item"><a href="index.html#new-section" class="nav-link">Use Case</a></li>
+                <li class="nav-item"><a href="index.html#faq-section" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="user-guide.html" class="nav-link js-scroll-trigger">User Guide</a></li>
+                 <li class="nav-item"><a href="about-us.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="manual-section-wrapper">
+        <div id="user-manual-main" class="manual-section">
+            <!-- English User Guide Content Goes Here -->
+            <h2>User Manual: Spin The Wheel</h2>
+
+            <p><strong>Table of Contents</strong></p>
+            <ul>
+                <li><a href="#introduction">1. Introduction</a></li>
+                <li><a href="#getting-started">2. Getting Started</a></li>
+                <li><a href="#main-interface-overview">3. Main Interface Overview</a>
+                    <ul>
+                        <li><a href="#wheel-area">3.1 Wheel Area</a></li>
+                        <li><a href="#controls-area">3.2 Controls Area</a></li>
+                    </ul>
+                </li>
+                <li><a href="#core-functionality">4. Core Functionality</a>
+                    <ul>
+                        <li><a href="#adding-entries">4.1 Adding and Editing Entries (Including Weighted Entries & Duplicate Handling)</a></li>
+                        <li><a href="#spinning-wheel">4.2 Spinning the Wheel</a></li>
+                        <li><a href="#viewing-results">4.3 Viewing Results</a></li>
+                        <li><a href="#managing-entries">4.4 Managing Entries (Shuffle, Sort)</a></li>
+                        <li><a href="#importing-exporting">4.5 Importing and Exporting Entries (Using [ .txt ] files)</a></li>
+                    </ul>
+                </li>
+                <li><a href="#customization">5. Customization</a>
+                    <ul>
+                        <li><a href="#color-themes">5.1 Color Themes</a></li>
+                        <li><a href="#advanced-settings">5.2 Advanced Settings</a></li>
+                    </ul>
+                </li>
+                <li><a href="#interacting-winners">6. Interacting with Winners (Winner Modal Actions)</a></li>
+                <li><a href="#layout-options">7. Layout Options</a>
+                    <ul>
+                        <li><a href="#focused-view">7.1 Focused Wheel View (Hiding Controls Area)</a></li>
+                    </ul>
+                </li>
+                <li><a href="#data-persistence">8. Data Persistence (Automatic Local Saving)</a></li>
+                <li><a href="#tips-notes">9. Tips and Notes</a></li>
+            </ul>
+
+            <h3 id="introduction">1. Introduction</h3>
+            <p>Welcome to Spin The Wheel! This versatile tool allows you to create a customizable spinning wheel with your chosen entries (names, items, tasks, decisions, etc.). Simply input your options, spin the wheel, and let a random result be chosen. It's perfect for conducting raffles, making group decisions, engaging classroom activities, spicing up remote events, and much more. When you need to make an impartial choice, let the wheel decide!</p>
+            <div class="placeholder-image"><img src="./static/img/namepickerwheel-1.png" alt="the main wheel interface"><p>the main wheel interface</p></div>
+
+
+            <h3 id="getting-started">2. Getting Started</h3>
+            <p>Getting started is quick and easy. When you first open the application (<code>index.html</code>), you'll be greeted with a pre-populated list of example names in the "Entries" input area and a colorful wheel ready for action.</p>
+            <ul>
+                <li><strong>Instant Action:</strong> Click the prominent <strong>"Spin!"</strong> button in the Controls Area or the inviting <strong>"Click to Spin!"</strong> overlay directly on spin the wheel to see it in motion.</li>
+                <li><strong>Your Own Content:</strong> To personalize spin the wheel, navigate to the "Entries" tab and simply edit or replace the example text in the "Entries Text Area" with your own items.</li>
+            </ul>
+
+            <h3 id="main-interface-overview">3. Main Interface Overview</h3>
+            <p>The application interface is primarily split into two main sections: the <strong>Wheel Area</strong> and the <strong>Controls Area</strong>. On larger desktop screens, these sections appear side-by-side. On smaller mobile screens, the Controls Area is conveniently positioned below spin the Wheel Area.</p>
+            <div class="placeholder-image"><img src="./static/img/main-layout-2.png" alt="Diagram showing desktop side-by-side and mobile stacked layout"><p>Diagram showing desktop side-by-side and mobile stacked layout</p></div>
+
+            <h4 id="wheel-area">3.1 Wheel Area</h4>
+            <p>This is where the visual excitement unfolds.</p>
+            <ul>
+                <li><strong>Wheel Canvas:</strong> The dynamic, circular canvas where your entries are rendered as distinct, colored segments of spin the wheel.</li>
+                <li><strong>Wheel Overlay:</strong> When spin the wheel is idle, a semi-transparent overlay appears with the text "Click to Spin!". Clicking this will initiate the spin. This overlay disappears during the spin.</li>
+                <li><strong>Pointer:</strong> A triangular pointer (positioned on the right edge for desktop view and at the top center for mobile view) clearly indicates which segment is the winner once spin the wheel comes to a stop.</li>
+            </ul>
+            <div class="placeholder-image"><img src="./static/img/namepickerwheel-1.png" alt="spin the Wheel Area highlighting canvas, overlay, and pointer"><p>spin the Wheel Area highlighting canvas, overlay, and pointer</p></div>
+
+            <h4 id="controls-area">3.2 Controls Area</h4>
+            <p>This comprehensive section houses all the tools you need to input your data, manage your entries, and customize the wheel's appearance and behavior.</p>
+            <div class="placeholder-image"><img src="./static/img/controls-4.png" alt="Controls Area"><p>Controls Area</p></div>
+            <ul>
+                <li><strong>Tabs: Entries & Results</strong>
+                    <p>At the top of the Controls Area, you'll find two main tabs:</p>
+                    <ul>
+                        <li><strong>Entries Tab:</strong> Your primary workspace for managing wheel content.
+                            <ul>
+                                <li><strong>Entries Text Area:</strong> Input items here, one per line.</li>
+                                <li><strong>Weighted Entries:</strong> Format: <code>Item Name : Weight</code> (e.g., <code>Option A : 3</code>). Higher weight = higher chance. Default is 1.</li>
+                                <li><strong>Entries Count:</strong> Shows the number of active entries.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Results Tab:</strong> Tracks outcomes.
+                            <ul>
+                                <li><strong>Results List Area:</strong> Displays winners from the current session (duplicates listed if won multiple times).</li>
+                                <li><strong>Results Count:</strong> Total number of winners recorded.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="placeholder-image"><img src="./static/img/entries-5.png" alt="Entries tab active, showing text area and count"><p>Entries tab active, showing text area and count</p></div>
+                    <div class="placeholder-image"><img src="./static/img/results-6.png" alt="Results tab active, showing list area and count"><p>Results tab active, showing list area and count</p></div>
+                </li>
+                <li><strong>Controls Header Actions</strong>
+                    <ul>
+                        <li><strong>Hide Checkbox ("Hide"):</strong> Collapses the Controls Area for a focused wheel view.</li>
+                        <li><strong>Advanced Settings Button (⚙️):</strong> Toggles the Advanced Settings panel.</li>
+                    </ul>
+                </li>
+                <li><strong>Advanced Settings Panel (Collapsible)</strong>
+                     <div class="placeholder-image"><img src="./static/img/settings-panel-7.png" alt="Advanced Settings panel"><p>Advanced Settings panel</p></div>
+                    <ul>
+                        <li><strong>Enable Sounds:</strong> Checkbox for all sound effects.</li>
+                        <li><strong>Base Spin Duration (seconds):</strong> Input (1-10s) for minimum spin time.</li>
+                        <li><strong>Font Family:</strong> Dropdown to select font for wheel text.</li>
+                        <li><strong>Font Size (px):</strong> Input (8-24px) for wheel text size.</li>
+                        <li><strong>Custom Segment Colors:</strong> 10 color pickers for the first 10 entries, overriding the theme. "Reset Custom Colors" button reverts to theme.</li>
+                    </ul>
+                </li>
+                <li><strong>Action Buttons (Entries Tab)</strong>
+                    <div class="placeholder-image"><img src="./static/img/shuffle-8.png" alt="Shuffle, Sort, Import, Export buttons"><p>Shuffle, Sort, Import, Export buttons</p></div>
+                    <ul>
+                        <li><strong>🔀 Shuffle:</strong> Randomly reorders entries.</li>
+                        <li><strong>⇅ Sort:</strong> Sorts entries alphabetically.</li>
+                        <li><strong>📥 Import:</strong> Load entries from a <code>.txt</code> file.</li>
+                        <li><strong>📤 Export:</strong> Save entries to a <code>.txt</code> file.</li>
+                    </ul>
+                </li>
+                <li><strong>Color Theme Selector</strong>
+                    <div class="placeholder-image"><img src="./static/img/theme-9.png" alt="Color Theme dropdown"><p>Color Theme dropdown</p></div>
+                    <ul>
+                        <li><strong>"Color Theme:" Dropdown:</strong> Choose predefined color palettes.</li>
+                    </ul>
+                </li>
+                <li><strong>Main Controls</strong>
+                     <div class="placeholder-image"><img src="./static/img/updatewheel-10.png" alt="Update Wheel and Spin!"><p>Update Wheel and Spin</p></div>
+                    <ul>
+                        <li><strong>Update Wheel Button:</strong> Refreshes wheel display after entry changes without spinning.</li>
+                        <li><strong>Spin! Button:</strong> Starts the wheel spin.</li>
+                    </ul>
+                </li>
+                <li><strong>Result Display</strong>
+                    <p>Text area below Main Controls showing status messages (e.g., "Spin to select!", "Spinning...").</p>
+                </li>
+            </ul>
+
+            <h3 id="core-functionality">4. Core Functionality</h3>
+
+            <h4 id="adding-entries">4.1 Adding and Editing Entries (Including Weighted Entries & Duplicate Handling)</h4>
+            <ol>
+                <li>Ensure the <strong>Entries</strong> tab is active.</li>
+                <li>In the <strong>Entries Text Area</strong>:
+                    <ul>
+                        <li>Type each item on a new line.</li>
+                        <li>To assign a weight: <code>Item Name : Weight</code> (e.g., <code>Task X : 2</code>, <code>Task Y : 1</code>). Higher weights mean higher probability. The default weight is 1.</li>
+                    </ul>
+                </li>
+                <li><strong>Updating spin the Wheel:</strong>
+                    <ul>
+                        <li>Click <strong>"Update Wheel"</strong> or simply click <strong>"Spin!"</strong> to apply changes.</li>
+                        <li><strong>Duplicate Entry Handling:</strong> If duplicate names are entered, a confirmation pop-up will ask if you want to remove duplicates (keeping the first occurrence and its weight). Choosing "Cancel" keeps duplicates as separate segments on spin the wheel.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h4 id="spinning-wheel">4.2 Spinning the Wheel</h4>
+            <ol>
+                <li>Ensure your desired entries are in the "Entries" list and spin the wheel is updated.</li>
+                <li>Click the <strong>"Spin!"</strong> button in the Controls Area OR click the <strong>"Click to Spin!"</strong> overlay on spin the wheel itself.</li>
+                <li>Spin The wheel will spin for a set duration and then slow down to reveal the selected entry.</li>
+                <li>A <strong>Winner Modal</strong> (see section 6) will pop up announcing the winner, and confetti will appear (if sounds are enabled).</li>
+            </ol>
+            <div class="placeholder-image"><img src="./static/img/congratulations-11.png" alt="sequence showing wheel spin and winner modal"><p>sequence showing wheel spin and winner modal</p></div>
+
+            <h4 id="viewing-results">4.3 Viewing Results</h4>
+            <ol>
+                <li>After a spin, the winner's name is added to a results list.</li>
+                <li>Click the <strong>Results</strong> tab.</li>
+                <li>The <strong>Results List Area</strong> will display all winners from the current session, one per line (duplicates are listed each time they win).</li>
+                <li>The <strong>Results Count</strong> shows the total number of winners recorded in the session.</li>
+            </ol>
+
+            <h4 id="managing-entries">4.4 Managing Entries (Shuffle, Sort)</h4>
+            <p>These buttons are active when the "Entries" tab is selected.</p>
+            <ul>
+                <li><strong>Shuffle (🔀):</strong> Click to randomly reorder the current list in the "Entries" text area. Spin the wheel will update automatically.</li>
+                <li><strong>Sort (⇅):</strong> Click to sort the current list in the "Entries" text area alphabetically. Spin the wheel will update automatically.</li>
+            </ul>
+
+            <h4 id="importing-exporting">4.5 Importing and Exporting Entries (Using <code>.txt</code> files)</h4>
+            <ul>
+                <li><strong>Import (📥):</strong>
+                    <ol>
+                        <li>Click the "Import" button.</li>
+                        <li>Your browser's file dialog will open.</li>
+                        <li>Select a plain text file (<code>.txt</code>) containing your list of entries (one entry per line, optionally with <code>: weight</code>).</li>
+                        <li>The entries from the file will replace the current list in the "Entries" text area, and spin the wheel will update.</li>
+                    </ol>
+                </li>
+                <li><strong>Export (📤):</strong>
+                    <ol>
+                        <li>Click the "Export" button.</li>
+                        <li>Your current list of entries (including any weights) will be saved as a <code>lucky_wheel_items.txt</code> file to your computer's default download location.</li>
+                    </ol>
+                </li>
+            </ul>
+
+            <h3 id="customization">5. Customization</h3>
+
+            <h4 id="color-themes">5.1 Color Themes</h4>
+            <ol>
+                <li>Locate the <strong>"Color Theme:"</strong> dropdown menu in the Controls Area.</li>
+                <li>Select a theme (e.g., Classic, Pastel, Vibrant, Earthy).</li>
+                <li>Spin the wheel segment colors will instantly update to reflect the chosen theme (unless overridden by Custom Segment Colors).</li>
+            </ol>
+
+            <h4 id="advanced-settings">5.2 Advanced Settings</h4>
+            <p>Click the <strong>gear icon (⚙️)</strong> to open the Advanced Settings panel.</p>
+            <ul>
+                <li><strong>Enable Sounds:</strong>
+                    <ul>
+                        <li>Toggle the checkbox to enable or disable sound effects for spinning, winning, and button clicks.</li>
+                        <li><em>Note: Browsers may require user interaction (like a click) on the page before sounds can play.</em></li>
+                    </ul>
+                </li>
+                <li><strong>Base Spin Duration (seconds):</strong>
+                    <ul>
+                        <li>Enter a number between 1 and 10 to control the minimum spin time. The default is 3 seconds.</li>
+                    </ul>
+                </li>
+                <li><strong>Font Family & Size (for wheel text):</strong>
+                    <ul>
+                        <li><strong>Font Family:</strong> Select a font from the dropdown for the text displayed on each wheel segment.</li>
+                        <li><strong>Font Size (px):</strong> Enter a font size (8-24px) for the text on wheel segments. Larger fonts might get truncated if the segment is small or the name is long.</li>
+                    </ul>
+                </li>
+                <li><strong>Custom Segment Colors:</strong>
+                    <ol>
+                        <li>This section provides 10 color picker inputs.</li>
+                        <li>Each color picker corresponds to an entry in your list, in order (the first picker for the first entry, second for the second, and so on, up to the 10th entry).</li>
+                        <li>Click a color picker to choose a specific color for that segment.</li>
+                        <li>This custom color will override the selected Color Theme for that particular segment.</li>
+                        <li>If you have more than 10 entries, entries 11 onwards will use the selected Color Theme.</li>
+                        <li><strong>Reset Custom Colors Button:</strong> Click this to clear all your custom color choices. Spin the wheel will then fully use the selected Color Theme for all segments. A confirmation will be asked.</li>
+                    </ol>
+                     <div class="placeholder-image"><img src="./static/img/color-pickers-12.png" alt="the 10 color pickers"><p>the 10 color pickers</p></div>
+                </li>
+            </ul>
+
+            <h3 id="interacting-winners">6. Interacting with Winners (Winner Modal Actions)</h3>
+            <p>Once spin the wheel stops, a modal window pops up:</p>
+            <div class="placeholder-image"><img src="./static/img/winner-modal-13.png" alt="the Winner Modal showing title, winner name, Close, and Delete buttons"><p>the Winner Modal showing title, winner name, Close, and Delete buttons</p></div>
+            <ul>
+                <li><strong>Title:</strong> "Congratulations!"</li>
+                <li><strong>Winner's Name:</strong> Displays the name of the selected entry.</li>
+                <li><strong>Buttons:</strong>
+                    <ul>
+                        <li><strong>Close:</strong> Closes the modal. The winner remains in the "Entries" list for future spins. This is the "Normal Mode" of operation.</li>
+                        <li><strong>Delete Winner:</strong> Removes the winning entry from the "Entries" list and spin the wheel. This allows for an "Elimination Mode" style of play, where items are picked one by one without repetition. Then closes the modal.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 id="layout-options">7. Layout Options</h3>
+            <h4 id="focused-view">7.1 Focused Wheel View (Hiding Controls Area)</h4>
+            <ul>
+                <li><strong>To Hide Controls:</strong> Check the "Hide" checkbox in the Controls Header. The Controls Area will disappear, and spin the Wheel Area will expand, offering a view similar to a full-screen mode focused on spin the wheel.
+                    <ul>
+                        <li>A "Show Controls" button will appear (usually bottom-right) to restore the Controls Area.</li>
+                    </ul>
+                    <div class="placeholder-image"><img src="./static/img/hidemode-14.png" alt="the Hide checkbox"><p>the Hide checkbox</p></div>
+                </li>
+                <li><strong>To Show Controls:</strong> Click the "Show Controls" button (if controls are hidden) OR uncheck the "Hide" checkbox.</li>
+            </ul>
+
+            <h3 id="data-persistence">8. Data Persistence (Automatic Local Saving)</h3>
+            <p>The application automatically saves the following in your web browser's local storage:</p>
+            <ul>
+                <li>Your list of entries (including weights).</li>
+                <li>The selected Color Theme.</li>
+                <li>The state of the Advanced Settings panel (expanded or collapsed).</li>
+                <li>Sound enabled/disabled state.</li>
+                <li>Base spin duration.</li>
+                <li>Selected font family and size.</li>
+                <li>Your custom segment color choices.</li>
+            </ul>
+            <p>This means when you close the browser tab and reopen it later (using the same browser), your previous setup will be restored. This data is stored locally in your browser and is not sent to any server.</p>
+
+            <h3 id="tips-notes">9. Tips and Notes</h3>
+            <ul>
+                <li><strong>No Internet Required (After Initial Load):</strong> Once the page is loaded, you can use the tool offline.</li>
+                <li><strong>Clearing Browser Data:</strong> If you clear your browser's cache or local storage for this site, your saved entries and settings will be lost. Use "Export" to back up important lists.</li>
+                <li><strong>Many Entries:</strong> spin the wheel can support many entries, but very long names or a very large number of entries might make the text on segments small or hard to read. Use the Font Size setting to adjust.</li>
+                <li><strong>Performance:</strong> With an extremely large number of entries (hundreds or thousands), performance might degrade slightly during wheel drawing or spinning, depending on your computer.</li>
+                <li><strong>Sound Issues:</strong> If sounds don't play, ensure they are enabled in Advanced Settings. Some browsers block auto-playing sounds until you interact with the page (e.g., click a button). Ensure sound files (`spin.mp3`, `win.mp3`, `whoosh.mp3`) are accessible to the HTML file.</li>
+            </ul>
+            <hr>
+            <p><em>Enjoy using Spin The Wheel - Random Picker / Wheel Decide!</em></p>
+        </div>
+    </div>
+<footer>
+    <p>© 2025 Spin The Wheel. All Rights Reserved. <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-use.html">Terms of Use</a> | <a href="user-guide.html">Help</a></p>
+</footer>
+    <script src="./static/js/userguide.js"></script>
+</body>
+</html>
