@@ -30,6 +30,54 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I add weighted items?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Easy! When entering items in the \"Entries\" text area, use the format: `Item Name : Weight`. For example, `Steel Beam : 3` will have three times the chance of being picked compared to an item like Rivet : 1 (or an item with no weight specified, which defaults to 1). The wheel segments will visually represent these weights."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my list of items and settings be saved if I close the browser?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Your current list of items, selected color theme, sound preferences, spin duration, font choices, and custom segment colors are automatically saved in your browser's local storage. When you revisit the page using the same browser, these settings should be reloaded."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a limit to how many items I can put on the wheel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While there isn't a strict technical limit, a very large number of items (e.g., hundreds) might result in very small segments on the wheel, making the text difficult to read. Performance could also slightly degrade with an extremely long list. We recommend a practical number for best visibility and performance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I remove a winner from Spin the wheel after it's selected?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! After a winner is announced, a modal popup will appear. In this popup, you'll see a \"Delete Winner\" button. Clicking this will remove the winning item from your current list and update Spin the wheel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the Hide Controls checkbox work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You'll find a \"Hide\" checkbox in the header of the controls section. Ticking this will collapse the entire controls panel, giving you a larger, more focused view of the spinning wheel. A \"Show Controls\" button will appear at the bottom-right of the screen to bring the controls back."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
     <nav class="navbar-industrial">
@@ -179,17 +227,17 @@
     </div>
         <div class="manual-section-wrapper" style="margin-bottom:0;">
         <div id="user-manual-main" class="manual-section">
-            <h2>How Can Use Spin The Wheel!</h2>
+            <h2>How to Use Spin The Wheel!</h2>
             <h3 id="introduction">1. Introduction</h3>
-            <p>Welcome to use Spin The Wheel! This versatile tool allows you to create a customizable spinning wheel with your chosen entries (names, items, tasks, decisions, etc.). Simply input your options, spin the wheel, and let a random result be chosen. It's perfect for conducting raffles, making group decisions, engaging classroom activities, spicing up remote events, and much more. When you need to make an impartial choice, let the wheel decide!</p>
-            <div class="placeholder-image"><img src="/static/img/namepickerwheel-1.png" alt="the main wheel interface"><p>the main wheel interface</p></div>
+            <p>Welcome to Spin The Wheel! Our Spin The Wheel application is a versatile tool that allows you to create a customizable spinning wheel with your chosen entries (names, items, tasks, decisions, etc.). Simply input your options, spin the wheel, and let a random result be chosen. It's perfect for conducting raffles, making group decisions, engaging classroom activities, spicing up remote events, and much more. When you need to make an impartial choice, let the wheel decide!</p>
+            <div class="placeholder-image"><img src="/static/img/namepickerwheel-1.png" alt="the main spin the wheel interface"><p>the main spin the wheel interface</p></div>
 
 
             <h3 id="getting-started">2. Getting Started</h3>
             <p>Getting started is quick and easy. When you first open the application (<code>index.html</code>), you'll be greeted with a pre-populated list of example names in the "Entries" input area and a colorful wheel ready for action.</p>
             <ul>
                 <li><strong>Instant Action:</strong> Click the prominent <strong>"Spin!"</strong> button in the Controls Area or the inviting <strong>"Click to Spin!"</strong> overlay directly on spin the wheel to see it in motion.</li>
-                <li><strong>Your Own Content:</strong> To personalize spin the wheel, navigate to the "Entries" tab and simply edit or replace the example text in the "Entries Text Area" with your own items.</li>
+                <li><strong>Your Own Content:</strong> To personalize your Spin The Wheel experience, navigate to the "Entries" tab and simply edit or replace the example text in the "Entries Text Area" with your own items.</li>
             </ul>
 
             <h3 id="main-interface-overview">3. Main Interface Overview</h3>
@@ -207,7 +255,7 @@
 
             <h4 id="controls-area">3.2 Controls Area</h4>
             <p>This comprehensive section houses all the tools you need to input your data, manage your entries, and customize the wheel's appearance and behavior.</p>
-            <div class="placeholder-image"><img src="/static/img/controls-4.png" alt="Controls Area"><p>Controls Area</p></div>
+            <div class="placeholder-image"><img src="/static/img/controls-4.png" alt="Controls Area for Spin The Wheel"><p>Controls Area for Spin The Wheel</p></div>
             <ul>
                 <li><strong>Tabs: Entries & Results</strong>
                     <p>At the top of the Controls Area, you'll find two main tabs:</p>
@@ -302,7 +350,7 @@
 
             <h4 id="viewing-results">4.3 Viewing Results</h4>
             <ol>
-                <li>After a spin, the winner's name is added to a results list.</li>
+                <li>After a spin, the winner's name is added to a results list for your Spin The Wheel session.</li>
                 <li>Click the <strong>Results</strong> tab.</li>
                 <li>The <strong>Results List Area</strong> will display all winners from the current session, one per line (duplicates are listed each time they win).</li>
                 <li>The <strong>Results Count</strong> shows the total number of winners recorded in the session.</li>
@@ -338,7 +386,7 @@
             <h4 id="color-themes">5.1 Color Themes</h4>
             <ol>
                 <li>Locate the <strong>"Color Theme:"</strong> dropdown menu in the Controls Area.</li>
-                <li>Select a theme (e.g., Classic, Pastel, Vibrant, Earthy).</li>
+                <li>Select a theme (e.g., Classic, Pastel, Vibrant, Earthy)for your Spin The Wheel.</li>
                 <li>Spin the wheel segment colors will instantly update to reflect the chosen theme (unless overridden by Custom Segment Colors).</li>
             </ol>
 
@@ -412,7 +460,7 @@
                 <li>Selected font family and size.</li>
                 <li>Your custom segment color choices.</li>
             </ul>
-            <p>This means when you close the browser tab and reopen it later (using the same browser), your previous setup will be restored. This data is stored locally in your browser and is not sent to any server.</p>
+            <p>This means when you close the browser tab and reopen Spin The Wheel later (using the same browser), your previous setup will be restored. This data is stored locally in your browser and is not sent to any server.</p>
 
             <h3 id="tips-notes">9. Tips and Notes</h3>
             <ul>
@@ -481,7 +529,7 @@ A: Easy! When entering items in the "Entries" text area, use the format: <code>I
 <li><strong>Q: Will my list of items and settings be saved if I close the browser?</strong><br>
 A: Yes! Your current list of items, selected color theme, sound preferences, spin duration, font choices, and custom segment colors are automatically saved in your browser's local storage. When you revisit the page using the same browser, these settings should be reloaded.</li>
 <li><strong>Q: Is there a limit to how many items I can put on Spin the wheel?</strong><br>
-A: While there isn't a strict technical limit, a very large number of items (e.g., hundreds) might result in very small segments on Spin the wheel, making the text difficult to read. Performance could also slightly degrade with an extremely long list. We recommend a practical number for best visibility and performance.</li>
+A: Find answers to common questions about using the Spin The Wheel tool. While there isn't a strict technical limit, a very large number of items (e.g., hundreds) might result in very small segments on Spin the wheel, making the text difficult to read. Performance could also slightly degrade with an extremely long list. We recommend a practical number for best visibility and performance.</li>
 <li><strong>Q: How do the "Custom Segment Colors" in Advanced Settings work?</strong><br>
 A: In the "Advanced Settings" panel (click the ⚙️ icon), you'll find 10 color pickers. Each picker corresponds to an item in your list, starting from the top (the first picker for the first item, second for the second, and so on, up to the 10th item). Choosing a color here will override the selected theme color for that specific segment on Spin the wheel. Click "Reset Custom Colors" to revert to theme colors.</li>
 <li><strong>Q: What happens if I clear my browser's cache or data?</strong><br>
@@ -495,7 +543,7 @@ A: These buttons are located under the "Entries" tab.
 [icon: 🔀 ] Shuffle: Randomly reorders the items currently in your "Entries" text area.
 [icon: ↕️ ] Sort: Arranges the items in your "Entries" text area alphabetically (A-Z).</li>
 <li><strong>Q: How does the "Hide Controls" checkbox work?</strong><br>
-A: You'll find a "Hide" checkbox in the header of the controls section. Ticking this will collapse the entire controls panel, giving you a larger, more focused view of the spinning wheel. A "Show Controls" button will appear at the bottom-right of the screen to bring the controls back.</li>
+A: You'll find a "Hide" checkbox in the header of the controls section. Ticking this will collapse the entire controls panel, giving you a larger, more focused view of the spin the  wheel. A "Show Controls" button will appear at the bottom-right of the screen to bring the controls back.</li>
     </ul>
 </div>
 <footer>
