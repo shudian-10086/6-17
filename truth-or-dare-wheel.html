@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth or Dare Wheel - Wheel Decide</title>
+    <meta name="description" content="Welcome to the Truth Or Dare Wheel! This tool is designed to bring a new level of random, chaotic fun to your favorite party game.">
+
+    <meta property="og:title" content="Truth Or Dare Wheel - Wheel Decide">
+    <meta property="og:description" content="Welcome to the Truth Or Dare Wheel! This tool is designed to bring a new level of random, chaotic fun to your favorite party game.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spinwheelonline.org/truth-or-dare-wheel.html"> 
+    <meta property="og:image" content="./static/img/namepickerwheel-1.png">
+    <meta property="og:image:alt" content="Truth Or Dare Wheel - Wheel Decide">
+    <meta property="og:site_name" content="Spin The Wheel">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Truth Or Dare Wheel - Wheel Decide">
+    <meta name="twitter:description" content="Welcome to the Truth Or Dare Wheel! This tool is designed to bring a new level of random, chaotic fun to your favorite party game.">
+    <meta name="twitter:image" content="./static/img/namepickerwheel-1.png">
+
+    <link rel="canonical" href="https://spinwheelonline.org/truth-or-dare-wheel.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+</head>
+<body>
+    <nav class="navbar-industrial">
+        <div class="navbar-brand">
+            <h1><a href="/"> Spin The Wheel</a></h1>
+        </div>
+        <button class="navbar-toggler" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarIndustrialNav">
+            <span class="toggler-icon"></span>
+            <span class="toggler-icon"></span>
+            <span class="toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" id="navbarIndustrialNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#faq-section" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="./user-guide.html" class="nav-link js-scroll-trigger">User Guide</a></li>
+                 <li class="nav-item"><a href="./about-us.html" class="nav-link">about</a></li>
+                <li class="nav-item"><a href="./contact-us.html" class="nav-link">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main-content-wrapper" id="mainContentWrapper">
+        <div class="wheel-section">
+            <div class="container">
+                <div class="wheel-container" id="wheelAreaContainer">
+                    <canvas id="wheelCanvas"></canvas>
+                    <div class="wheel-overlay"><span>Click to Spin!</span></div>
+                    <div class="pointer"></div>
+                </div>
+            </div>
+        </div>
+        <div class="controls-section" id="controlsSection">
+            <div class="container">
+                <div class="controls-header">
+                    <div class="tabs">
+                        <button class="tab-button active" data-tab="entries">Entries <span class="tab-count" id="entriesCountEl">0</span></button>
+                        <button class="tab-button" data-tab="results">Results <span class="tab-count" id="resultsCountEl">0</span></button>
+                    </div>
+                    <div class="header-actions">
+                        <div class="hide-controls-checkbox">
+                            <input type="checkbox" id="hideControlsCheckbox">
+                            <label for="hideControlsCheckbox" id="hideControlsLabel">Hide</label>
+                        </div>
+                        <button id="advancedSettingsButton" class="icon-button" title="Advanced Settings">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.559.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.894.149c-.424.07-.764.383-.929.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.398.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.272-.806.108-1.204-.165-.397-.506-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.108-1.204l-.526-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894Z" />
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                        </button>
+                        <button class="icon-button" title="User Guide"><a href="./user-guide.html" style="color:#ccc" title="User Guide">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                        </svg></a>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="advancedSettingsPanel" class="advanced-settings-panel collapsed">
+                    <h2>Advanced Settings</h2>
+                    <div class="settings-content">
+                        <div class="setting-item">
+                            <label for="soundToggleCheckbox">Enable Sounds : </label>
+                            <input type="checkbox" id="soundToggleCheckbox">
+                        </div>
+                        <div class="setting-item">
+                            <label for="spinDurationInput">Base Spin Duration (seconds) : </label>
+                            <input type="number" id="spinDurationInput" min="1" max="10" step="0.5">
+                        </div>
+                        <div class="setting-item">
+                            <label for="fontFamilySelect">Font Family : </label>
+                            <select id="fontFamilySelect"></select>
+                        </div>
+                        <div class="setting-item">
+                            <label for="fontSizeInput">Font Size (px) : </label>
+                            <input type="number" id="fontSizeInput" min="8" max="24" step="1">
+                        </div>
+                        <hr>
+                        <div class="custom-colors-section">
+                            <p>Custom Segment Colors (Overrides Theme):</p>
+                            <div id="customColorPickersContainer" class="custom-color-pickers">
+                            </div>
+                            <button id="resetCustomColorsButton" class="action-buttons" style="margin-top: 15px; font-size: 0.8rem; padding: 4px 8px;">Reset Custom Colors</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="shuffleButton">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                            </svg>
+                        </span> Shuffle
+                    </button>
+                    <button id="sortButton">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0-3.75-3.75M17.25 21 21 17.25" />
+                            </svg>
+                        </span> Sort
+                    </button>
+                    <button id="deduplicateButton">
+                        <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
+                        </svg>
+                        </span> Deduplicate
+                    </button>
+                    <button id="importButton">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                            </svg>
+                        </span> Import
+                    </button>
+                    <button id="exportButton">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                            </svg>
+                        </span> Export
+                    </button>
+                    <input type="file" id="fileInput" accept=".txt" style="display: none;">
+                </div>
+                <textarea id="itemsInput" rows="7" placeholder="Enter one item per line... (e.g., Apple or Banana : 2 for weight)"></textarea>
+                <div id="resultsListArea" placeholder="Results will appear here..."></div>
+                 <div class="theme-selector-container">
+                    <label for="colorThemeSelect">Color Theme:</label>
+                    <select id="colorThemeSelect"></select>
+                </div>
+                <div class="main-controls">
+                    <button id="updateButton">Update Wheel</button>
+                    <button id="spinButton">Spin!</button>
+                </div>
+                <div class="result-display" id="resultDisplay">Spin to select!</div>
+            </div>
+        </div>
+        <button id="showControlsButton">Show Controls</button>
+    </div>
+    <div id="celebrationContainer"></div>
+
+    <div class="modal-overlay" id="winnerModalOverlay">
+        <div class="modal" id="winnerModal">
+            <div class="modal-content">
+                <div class="modal-title-main">Congratulations!</div>
+                <div class="winner-name" id="modalWinnerName">Winner Name</div>
+                <div class="modal-actions">
+                    <button class="modal-button-style delete" id="modalRemoveButton">Delete Winner</button>
+                    <button class="modal-button-style close" id="modalCloseButton">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="manual-section-wrapper" style="margin-bottom:0;">
+ <div class="manual-section" id="trending-wheels" style="padding-bottom: 25px;">
+     <h2 style="margin-top:0; text-align:center;">Trending Wheels</h2>
+     <div class="trending-links-container">
+         <a href="yes-or-no-wheel.html" class="trending-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" Color="#aaa">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+            </svg>
+             <span>Random picker / Lucky Wheel</span>
+         </a>
+
+         <a href="truth-or-dare-wheel.html" class="trending-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" Color="#aaa">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+            </svg>
+             <span>Truth or Dare Wheel</span>
+         </a>
+
+         <a href="yes-or-no-wheel.html" class="trending-link">
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" Color="#aaa">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0
+      3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+             </svg>
+             <span>Yes or No Wheel</span>
+         </a>
+
+         <a href="what-to-do-wheel.html" class="trending-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" Color="#aaa">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.242 5.992h12m-12 6.003H20.24m-12 5.999h12M4.117 7.495v-3.75H2.99m1.125 3.75H2.99m1.125 0H5.24m-1.92 2.577a1.125 1.125 0 1 1 1.591 1.59l-1.83 1.83h2.16M2.99 15.745h1.125a1.125 1.125 0 0 1 0 2.25H3.74m0-.002h.375a1.125 1.125 0 0 1 0 2.25H2.99" />
+            </svg>
+             <span>What to Do Today Wheel</span>
+         </a>
+
+         <a href="what-to-eat-wheel.html" class="trending-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" Color="#aaa">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5m-6 1.5v-1.5m12 9.75-1.5.75a3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0L3 16.5m15-3.379a48.474 48.474 0 0 0-6-.371c-2.032 0-4.034.126-6 .371m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.169c0 .621-.504 1.125-1.125 1.125H4.125A1.125 1.125 0 0 1 3 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 0 1 6 13.12M12.265 3.11a.375.375 0 1 1-.53 0L12 2.845l.265.265Zm-3 0a.375.375 0 1 1-.53 0L9 2.845l.265.265Zm6 0a.375.375 0 1 1-.53 0L15 2.845l.265.265Z" />
+            </svg>
+             <span>Where / What to Eat Wheel</span>
+         </a>
+
+     </div>
+ </div></div>
+        <div class="manual-section-wrapper" style="margin-bottom:0;">
+        <div id="user-manual-main" class="manual-section">
+     <h2>How to Use the Truth Or Dare Wheel</h2>
+
+     <h3 id="introduction">1. Introduction</h3>
+     <p>Welcome to the Truth Or Dare Wheel! This tool is designed to bring a new level of random, chaotic fun to your favorite party game. Instead of thinking up questions
+      or dares on the spot, simply load your lists, spin the wheel, and let fate decide! It's perfect for parties, social gatherings, and icebreaker events.</p>
+     <div class="placeholder-image">
+         <img src="./static/img/namepickerwheel-1.png" alt="The main interface of the Truth Or Dare Wheel">
+         <p>The main Truth Or Dare Wheel interface</p>
+     </div>
+
+    <h3 id="gameplay-setup">2. Gameplay Setup: Managing Truths & Dares</h3>
+    <p>The key to a great game is having great lists. Since the wheel uses one list at a time, the best way to play is by preparing separate text files for your truths
+      and dares.</p>
+    <ol>
+        <li>Create two plain text files on your computer: <code>truths.txt</code> and <code>dares.txt</code>.</li>
+        <li>In each file, write one entry per line. For example, in <code>truths.txt</code>:
+            <br>
+            <code>What's the most embarrassing thing you've ever done?</code><br>
+            <code>If you could be invisible for a day, what would you do?</code>
+        </li>
+        <li>You can even add weights to make some options more likely! For a dare that's extra spicy, you could write: <code>Sing everything you say for the next 10
+      minutes : 3</code>. This dare will have three times the chance of being selected.</li>
+    </ol>
+    <p>Using the <strong>📥 Import</strong> and <strong>📤 Export</strong> buttons is the recommended way to quickly switch between your lists during the game.</p>
+    <div class="placeholder-image">
+        <img src="./static/img/shuffle-8.png" alt="Import and Export buttons are key for managing lists">
+        <p>Use Import/Export to swap between Truths and Dares</p>
+    </div>
+
+    <h3 id="gameplay-flow">3. Suggested Gameplay Flow</h3>
+    <p>Here is a recommended way to play the game for maximum fun and fairness:</p>
+    <ol>
+        <li><strong>Create a Player Wheel:</strong> First, enter the names of all players into the "Entries" text area and spin to see who goes first. Let's say the
+      winner is "Player A".</li>
+        <li><strong>Choose Truth or Dare:</strong> Player A now asks the person to their left (Player B), "Truth or Dare?".</li>
+        <li><strong>Load the Correct List:</strong> If Player B chooses "Dare", click the <strong>📥 Import</strong> button and select your <code>dares.txt</code> file.
+      If they choose "Truth", import your <code>truths.txt</code> file. The wheel will instantly update with the chosen list.</li>
+        <li><strong>Spin for the Task:</strong> Click <strong>"Spin!"</strong> to select a random task for Player B.</li>
+        <li><strong>Remove the Task:</strong> After the task is revealed, a "Congratulations!" modal will appear. Click the <strong>"Delete Winner"</strong> button. This
+      removes the task from the list, ensuring it won't be selected again in this game session. This is crucial for keeping the game fresh!</li>
+        <li><strong>Continue:</strong> Now it's Player B's turn to spin the Player Wheel (or simply ask the person to their left) and continue the cycle.</li>
+    </ol>
+    <div class="placeholder-image">
+        <img src="./static/img/winner-modal-13.png" alt="The Winner Modal with the important 'Delete Winner' button">
+        <p>Always use "Delete Winner" to remove a completed task</p>
+    </div>
+    <h3 id="customization">4. Customizing Your Wheel</h3>
+    <p>Just like the standard wheel, you can customize the look and feel to match your party's vibe!</p>
+    <ul>
+        <li><strong>Color Themes:</strong> Use the "Color Theme" dropdown to select a palette.</li>
+        <li><strong>Advanced Settings (⚙️)</strong> Click the gear icon to access more options.
+            <ul>
+                <li><strong>Enable Sounds:</strong> Turn on sound effects for a more immersive experience.</li>
+                <li><strong>Spin Duration:</strong> Make the spin longer for more suspense!</li>
+                <li><strong>Fonts & Colors:</strong> Change the font, font size, and even set custom colors for specific segments on the wheel.</li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+            <p><em>Enjoy using Truth Or Dare Wheel - Wheel Decide!</em></p>
+        </div></div>
+<!-- START: ADDED USE CASES SECTION -->
+<div class="use-cases-section-wrapper container" id="new-section" style="display:none;">
+    <div class="w1080">
+    <h2>Spin The Wheel to make random choices</h2>
+    <div class="use-cases-grid">
+
+        <div class="use-case-card">
+            <div class="use-case-icon">🍽️</div>
+            <h3>What to Eat</h3>
+            <p>Can't decide? Let Spin the wheel help you choose your next meal and end daily dilemmas!</p>
+        </div>
+
+        <div class="use-case-card">
+            <div class="use-case-icon">🎲</div>
+            <h3>Truth or Dare</h3>
+            <p>Truth or Dare, or picking the next party game – let Spin the wheel add random fun to your gatherings.</p>
+        </div>
+
+        <div class="use-case-card">
+            <div class="use-case-icon">🧑‍🏫</div>
+            <h3>Random Name Picker</h3>
+            <p>Randomly select students for questions or activities, ensuring fairness and boosting engagement.</p>
+        </div>
+
+        <div class="use-case-card">
+            <div class="use-case-icon">✈️</div>
+            <h3>Wheel Spinner for Travel Destinations</h3>
+            <p>Have a few dream destinations? Use Spin the wheel to make that exciting, random choice!</p>
+        </div>
+
+        <div class="use-case-card">
+            <div class="use-case-icon">🎁</div>
+            <h3>Reward Wheel</h3>
+            <p>Give yourself a small, random reward after completing a task to boost motivation and surprise.</p>
+        </div>
+
+        <div class="use-case-card">
+            <div class="use-case-icon">🧹</div>
+            <h3>Wheel Of Chores</h3>
+            <p>Make assigning chores less tedious! Spin the wheel for a fun and fair way to decide who does what.</p>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+
+<div id="faq-section" class="manual-section container" style="display:none;margin-top:20px;">
+    <h2 id="faq-section">Frequently Asked Questions (FAQ)</h2>
+    <ul>
+        <li><strong>Q: How do I manage both Truths and Dares with only one input box?</strong><br>
+            A: The best method is to use the <strong>📥 Import</strong> and <strong>📤 Export</strong> buttons. Keep your truths and dares in separate <code>.txt</code>
+      files on your computer. When a player chooses "Truth," you import the truth list. When they choose "Dare," you import the dare list.
+        </li>
+        <li><strong>Q: How do we prevent the same dare from being chosen twice?</strong><br>
+            A: After a dare (or truth) is selected, a pop-up window appears. Simply click the <strong>"Delete Winner"</strong> button. This removes the item from the
+      current list for the rest of the game.
+        </li>
+        <li><strong>Q: Can I make some dares more likely to be picked? (Weighted Entries)</strong><br>
+            A: Yes! When writing your list, use the format: <code>Task Name : Weight</code>. For example, <code>Do 10 pushups : 2</code> will have double the chance of
+      being selected compared to an item with no weight specified.
+        </li>
+        <li><strong>Q: Will our custom list of dares be saved if we close the browser?</strong><br>
+            A: Yes. The last list you had in the "Entries" text area is automatically saved in your browser's local storage. When you reopen the page, it will be
+      reloaded. To save a specific list permanently, use the <strong>📤 Export</strong> button to save it as a <code>.txt</code> file.
+        </li>
+        <li><strong>Q: Can I change the colors of the wheel?</strong><br>
+            A: Absolutely. You can either choose a pre-made "Color Theme" from the dropdown menu or open the <strong>Advanced Settings (⚙️</strong> to set custom colors
+      for the first 10 segments of your wheel.
+        </li>
+    </ul>
+</div>
+<footer>
+    <p>© 2025 Spin The Wheel. All Rights Reserved. <a href="./privacy-policy.html">Privacy Policy</a> | <a href="./terms-of-use.html">Terms of Use</a> | <a href="./user-guide.html">Help</a></p>
+</footer>
+
+<script src="./static/js/truth-or-dare-wheel.js"></script>
+</body>
+</html>

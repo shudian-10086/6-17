@@ -10,7 +10,7 @@
     <meta property="og:description" content="Need to make a random choice? Use our free online spin the Wheel! Easily enter names or items, add weights, and spin for an instant, unbiased result. Ideal for raffles, name picking, and decision making. ">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://spinwheelonline.org/"> 
-    <meta property="og:image" content="/static/img/namepickerwheel-1.png">
+    <meta property="og:image" content="./static/img/namepickerwheel-1.png">
     <meta property="og:image:alt" content="Spin The Wheel - Random Picker / Wheel Decide">
     <meta property="og:site_name" content="Spin The Wheel">
 
@@ -18,18 +18,18 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Spin The Wheel - Random Picker / Wheel Decide">
     <meta name="twitter:description" content="Need to make a random choice? Use our free online spin the Wheel! Easily enter names or items, add weights, and spin for an instant, unbiased result. Ideal for raffles, name picking, and decision making.">
-    <meta name="twitter:image" content="/static/img/namepickerwheel-1.png">
+    <meta name="twitter:image" content="./static/img/namepickerwheel-1.png">
 
     <link rel="canonical" href="https://spinwheelonline.org/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="./static/css/index.css">
 
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -94,9 +94,9 @@
                 <li class="nav-item"><a href="/" class="nav-link">NEW</a></li>
                 <li class="nav-item"><a href="#new-section" class="nav-link">Use Case</a></li>
                 <li class="nav-item"><a href="#faq-section" class="nav-link">FAQ</a></li>
-                <li class="nav-item"><a href="/user-guide.html" class="nav-link js-scroll-trigger">User Guide</a></li>
-                 <li class="nav-item"><a href="/about-us.html" class="nav-link">about</a></li>
-                <li class="nav-item"><a href="/contact-us.html" class="nav-link">contact</a></li>
+                <li class="nav-item"><a href="./user-guide.html" class="nav-link js-scroll-trigger">User Guide</a></li>
+                 <li class="nav-item"><a href="./about-us.html" class="nav-link">about</a></li>
+                <li class="nav-item"><a href="./contact-us.html" class="nav-link">contact</a></li>
             </ul>
         </div>
     </nav>
@@ -128,7 +128,7 @@
                               <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                             </svg>
                         </button>
-                        <button class="icon-button" title="User Guide"><a href="/user-guide.html" style="color:#ccc" title="User Guide">
+                        <button class="icon-button" title="User Guide"><a href="./user-guide.html" style="color:#ccc" title="User Guide">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
                         </svg></a>
@@ -180,6 +180,13 @@
                             </svg>
                         </span> Sort
                     </button>
+                    <button id="deduplicateButton">
+                        <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
+                        </svg>
+                        </span> Deduplicate
+                    </button>
                     <button id="importButton">
                         <span class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
@@ -226,11 +233,53 @@
         </div>
     </div>
         <div class="manual-section-wrapper" style="margin-bottom:0;">
+ <div class="manual-section" id="trending-wheels" style="padding-bottom: 25px;">
+     <h2 style="margin-top:0; text-align:center;">Trending Wheels</h2>
+     <div class="trending-links-container">
+         <a href="yes-or-no-wheel.html" class="trending-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+            </svg>
+             <span>Random picker / Lucky Wheel</span>
+         </a>
+
+         <a href="truth-or-dare-wheel.html" class="trending-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+            </svg>
+             <span>Truth or Dare Wheel</span>
+         </a>
+
+         <a href="yes-or-no-wheel.html" class="trending-link">
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0
+      3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+             </svg>
+             <span>Yes or No Wheel</span>
+         </a>
+
+         <a href="what-to-do-wheel.html" class="trending-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.242 5.992h12m-12 6.003H20.24m-12 5.999h12M4.117 7.495v-3.75H2.99m1.125 3.75H2.99m1.125 0H5.24m-1.92 2.577a1.125 1.125 0 1 1 1.591 1.59l-1.83 1.83h2.16M2.99 15.745h1.125a1.125 1.125 0 0 1 0 2.25H3.74m0-.002h.375a1.125 1.125 0 0 1 0 2.25H2.99" />
+            </svg>
+             <span>What to Do Today Wheel</span>
+         </a>
+
+         <a href="what-to-eat-wheel.html" class="trending-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5m-6 1.5v-1.5m12 9.75-1.5.75a3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0L3 16.5m15-3.379a48.474 48.474 0 0 0-6-.371c-2.032 0-4.034.126-6 .371m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.169c0 .621-.504 1.125-1.125 1.125H4.125A1.125 1.125 0 0 1 3 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 0 1 6 13.12M12.265 3.11a.375.375 0 1 1-.53 0L12 2.845l.265.265Zm-3 0a.375.375 0 1 1-.53 0L9 2.845l.265.265Zm6 0a.375.375 0 1 1-.53 0L15 2.845l.265.265Z" />
+            </svg>
+             <span>Where / What to Eat Wheel</span>
+         </a>
+
+     </div>
+ </div></div>
+        <div class="manual-section-wrapper" style="margin-bottom:0;">
         <div id="user-manual-main" class="manual-section">
             <h2>How to Use Spin The Wheel!</h2>
             <h3 id="introduction">1. Introduction</h3>
             <p>Welcome to Spin The Wheel! Our Spin The Wheel application is a versatile tool that allows you to create a customizable spinning wheel with your chosen entries (names, items, tasks, decisions, etc.). Simply input your options, spin the wheel, and let a random result be chosen. It's perfect for conducting raffles, making group decisions, engaging classroom activities, spicing up remote events, and much more. When you need to make an impartial choice, let the wheel decide!</p>
-            <div class="placeholder-image"><img src="/static/img/namepickerwheel-1.png" alt="the main spin the wheel interface"><p>the main spin the wheel interface</p></div>
+            <div class="placeholder-image"><img src="./static/img/namepickerwheel-1.png" alt="the main spin the wheel interface"><p>the main spin the wheel interface</p></div>
 
 
             <h3 id="getting-started">2. Getting Started</h3>
@@ -242,7 +291,7 @@
 
             <h3 id="main-interface-overview">3. Main Interface Overview</h3>
             <p>The application interface is primarily split into two main sections: the <strong>Wheel Area</strong> and the <strong>Controls Area</strong>. On larger desktop screens, these sections appear side-by-side. On smaller mobile screens, the Controls Area is conveniently positioned below spin the Wheel Area.</p>
-            <div class="placeholder-image"><img src="/static/img/main-layout-2.png" alt="Diagram showing desktop side-by-side and mobile stacked layout"><p>Diagram showing desktop side-by-side and mobile stacked layout</p></div>
+            <div class="placeholder-image"><img src="./static/img/main-layout-2.png" alt="Diagram showing desktop side-by-side and mobile stacked layout"><p>Diagram showing desktop side-by-side and mobile stacked layout</p></div>
 
             <h4 id="wheel-area">3.1 Wheel Area</h4>
             <p>This is where the visual excitement unfolds.</p>
@@ -251,11 +300,11 @@
                 <li><strong>Wheel Overlay:</strong> When spin the wheel is idle, a semi-transparent overlay appears with the text "Click to Spin!". Clicking this will initiate the spin. This overlay disappears during the spin.</li>
                 <li><strong>Pointer:</strong> A triangular pointer (positioned on the right edge for desktop view and at the top center for mobile view) clearly indicates which segment is the winner once spin the wheel comes to a stop.</li>
             </ul>
-            <div class="placeholder-image"><img src="/static/img/namepickerwheel-1.png" alt="spin the Wheel Area highlighting canvas, overlay, and pointer"><p>spin the Wheel Area highlighting canvas, overlay, and pointer</p></div>
+            <div class="placeholder-image"><img src="./static/img/namepickerwheel-1.png" alt="spin the Wheel Area highlighting canvas, overlay, and pointer"><p>spin the Wheel Area highlighting canvas, overlay, and pointer</p></div>
 
             <h4 id="controls-area">3.2 Controls Area</h4>
             <p>This comprehensive section houses all the tools you need to input your data, manage your entries, and customize the wheel's appearance and behavior.</p>
-            <div class="placeholder-image"><img src="/static/img/controls-4.png" alt="Controls Area for Spin The Wheel"><p>Controls Area for Spin The Wheel</p></div>
+            <div class="placeholder-image"><img src="./static/img/controls-4.png" alt="Controls Area for Spin The Wheel"><p>Controls Area for Spin The Wheel</p></div>
             <ul>
                 <li><strong>Tabs: Entries & Results</strong>
                     <p>At the top of the Controls Area, you'll find two main tabs:</p>
@@ -274,8 +323,8 @@
                             </ul>
                         </li>
                     </ul>
-                    <div class="placeholder-image"><img src="/static/img/entries-5.png" alt="Entries tab active, showing text area and count"><p>Entries tab active, showing text area and count</p></div>
-                    <div class="placeholder-image"><img src="/static/img/results-6.png" alt="Results tab active, showing list area and count"><p>Results tab active, showing list area and count</p></div>
+                    <div class="placeholder-image"><img src="./static/img/entries-5.png" alt="Entries tab active, showing text area and count"><p>Entries tab active, showing text area and count</p></div>
+                    <div class="placeholder-image"><img src="./static/img/results-6.png" alt="Results tab active, showing list area and count"><p>Results tab active, showing list area and count</p></div>
                 </li>
                 <li><strong>Controls Header Actions</strong>
                     <ul>
@@ -284,7 +333,7 @@
                     </ul>
                 </li>
                 <li><strong>Advanced Settings Panel (Collapsible)</strong>
-                     <div class="placeholder-image"><img src="/static/img/settings-panel-7.png" alt="Advanced Settings panel"><p>Advanced Settings panel</p></div>
+                     <div class="placeholder-image"><img src="./static/img/settings-panel-7.png" alt="Advanced Settings panel"><p>Advanced Settings panel</p></div>
                     <ul>
                         <li><strong>Enable Sounds:</strong> Checkbox for all sound effects.</li>
                         <li><strong>Base Spin Duration (seconds):</strong> Input (1-10s) for minimum spin time.</li>
@@ -294,7 +343,7 @@
                     </ul>
                 </li>
                 <li><strong>Action Buttons (Entries Tab)</strong>
-                    <div class="placeholder-image"><img src="/static/img/shuffle-8.png" alt="Shuffle, Sort, Import, Export buttons"><p>Shuffle, Sort, Import, Export buttons</p></div>
+                    <div class="placeholder-image"><img src="./static/img/shuffle-8.png" alt="Shuffle, Sort, Import, Export buttons"><p>Shuffle, Sort, Import, Export buttons</p></div>
                     <ul>
                         <li><strong>🔀 Shuffle:</strong> Randomly reorders entries.</li>
                         <li><strong>⇅ Sort:</strong> Sorts entries alphabetically.</li>
@@ -303,13 +352,13 @@
                     </ul>
                 </li>
                 <li><strong>Color Theme Selector</strong>
-                    <div class="placeholder-image"><img src="/static/img/theme-9.png" alt="Color Theme dropdown"><p>Color Theme dropdown</p></div>
+                    <div class="placeholder-image"><img src="./static/img/theme-9.png" alt="Color Theme dropdown"><p>Color Theme dropdown</p></div>
                     <ul>
                         <li><strong>"Color Theme:" Dropdown:</strong> Choose predefined color palettes.</li>
                     </ul>
                 </li>
                 <li><strong>Main Controls</strong>
-                     <div class="placeholder-image"><img src="/static/img/updatewheel-10.png" alt="Update Wheel and Spin!"><p>Update Wheel and Spin</p></div>
+                     <div class="placeholder-image"><img src="./static/img/updatewheel-10.png" alt="Update Wheel and Spin!"><p>Update Wheel and Spin</p></div>
                     <ul>
                         <li><strong>Update Wheel Button:</strong> Refreshes wheel display after entry changes without spinning.</li>
                         <li><strong>Spin! Button:</strong> Starts the wheel spin.</li>
@@ -346,7 +395,7 @@
                 <li>Spin The wheel will spin for a set duration and then slow down to reveal the selected entry.</li>
                 <li>A <strong>Winner Modal</strong> (see section 6) will pop up announcing the winner, and confetti will appear (if sounds are enabled).</li>
             </ol>
-            <div class="placeholder-image"><img src="/static/img/congratulations-11.png" alt="sequence showing wheel spin and winner modal"><p>sequence showing wheel spin and winner modal</p></div>
+            <div class="placeholder-image"><img src="./static/img/congratulations-11.png" alt="sequence showing wheel spin and winner modal"><p>sequence showing wheel spin and winner modal</p></div>
 
             <h4 id="viewing-results">4.3 Viewing Results</h4>
             <ol>
@@ -419,13 +468,13 @@
                         <li>If you have more than 10 entries, entries 11 onwards will use the selected Color Theme.</li>
                         <li><strong>Reset Custom Colors Button:</strong> Click this to clear all your custom color choices. Spin the wheel will then fully use the selected Color Theme for all segments. A confirmation will be asked.</li>
                     </ol>
-                     <div class="placeholder-image"><img src="/static/img/color-pickers-12.png" alt="the 10 color pickers"><p>the 10 color pickers</p></div>
+                     <div class="placeholder-image"><img src="./static/img/color-pickers-12.png" alt="the 10 color pickers"><p>the 10 color pickers</p></div>
                 </li>
             </ul>
 
             <h3 id="interacting-winners">6. Interacting with Winners (Winner Modal Actions)</h3>
             <p>Once spin the wheel stops, a modal window pops up:</p>
-            <div class="placeholder-image"><img src="/static/img/winner-modal-13.png" alt="the Winner Modal showing title, winner name, Close, and Delete buttons"><p>the Winner Modal showing title, winner name, Close, and Delete buttons</p></div>
+            <div class="placeholder-image"><img src="./static/img/winner-modal-13.png" alt="the Winner Modal showing title, winner name, Close, and Delete buttons"><p>the Winner Modal showing title, winner name, Close, and Delete buttons</p></div>
             <ul>
                 <li><strong>Title:</strong> "Congratulations!"</li>
                 <li><strong>Winner's Name:</strong> Displays the name of the selected entry.</li>
@@ -444,7 +493,7 @@
                     <ul>
                         <li>A "Show Controls" button will appear (usually bottom-right) to restore the Controls Area.</li>
                     </ul>
-                    <div class="placeholder-image"><img src="/static/img/hidemode-14.png" alt="the Hide checkbox"><p>the Hide checkbox</p></div>
+                    <div class="placeholder-image"><img src="./static/img/hidemode-14.png" alt="the Hide checkbox"><p>the Hide checkbox</p></div>
                 </li>
                 <li><strong>To Show Controls:</strong> Click the "Show Controls" button (if controls are hidden) OR uncheck the "Hide" checkbox.</li>
             </ul>
@@ -520,7 +569,7 @@
 </div>
 
 
-<div id="faq-section" class="manual-section container" style="display:none;">
+<div id="faq-section" class="manual-section container" style="display:none;margin-top:20px;">
     <h2>Spin The Wheel Frequently Asked Questions (FAQ)</h2>
     <p>Here are some common questions:</p>
     <ul>
@@ -547,9 +596,9 @@ A: You'll find a "Hide" checkbox in the header of the controls section. Ticking 
     </ul>
 </div>
 <footer>
-    <p>© 2025 Spin The Wheel. All Rights Reserved. <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms-of-use.html">Terms of Use</a> | <a href="/user-guide.html">Help</a></p>
+    <p>© 2025 Spin The Wheel. All Rights Reserved. <a href="./privacy-policy.html">Privacy Policy</a> | <a href="./terms-of-use.html">Terms of Use</a> | <a href="./user-guide.html">Help</a></p>
 </footer>
 
-<script src="/static/js/pickerwheel.js"></script>
+    <script src="./static/js/truth-or-dare-wheel.js"></script>
 </body>
 </html>

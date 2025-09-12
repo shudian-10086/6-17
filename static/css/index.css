@@ -924,3 +924,38 @@ footer a:hover{color:#ccc}
         font-size: 1rem;
     }
 }
+
+ .trending-links-container {
+     padding-top: 15px;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+     gap: 15px;
+ }
+
+ .trending-link {
+     display: flex;
+     align-items: center;
+     padding: 12px 15px;
+     background-color: var(--industrial-surface-light);
+     border: 1px solid var(--industrial-border);
+     border-radius: var(--border-radius-industrial);
+     text-decoration: none;
+     color: var(--industrial-text);
+     font-size: 1.1rem;
+     letter-spacing: 0.5px;
+     transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+ }
+
+ .trending-link:hover {
+     background-color: var(--industrial-accent);
+     border-color: #d0711e;
+     color: #fff;
+ }
+
+ .trending-link svg {
+     width: 1.5em;
+     height: 1.5em;
+     margin-right: 12px;
+     stroke-width: 1.5;
+     flex-shrink: 0; /* Prevents icon from shrinking */
+ }
