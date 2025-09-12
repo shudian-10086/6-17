@@ -13,10 +13,11 @@ const getPageConfig = () => {
     // --- Add new wheel configurations here ---
     const pageConfigs = {
         'index': {
-            defaults: ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank : 3', 'Grace', 'Heidi']
+            defaults: ['Alice', 'spinwheelonline.org', 'Charlie:5', 'David', 'Eve', 'Frank : 3', 'Grace', 'Heidi']
         },
         'truth-or-dare-wheel': {
             defaults: [
+                'spinwheelonline.org',
                 'What is the most embarrassing thing you have ever done?',
                 'What is a secret you have never told anyone?',
                 'What is the biggest lie you have ever told?',
@@ -375,13 +376,28 @@ function loadItemsFromLocalStorage() {
 
     if (loadedItems.length === 0) {
         // Use the dynamic defaults from the config object
-        return CONFIG.defaults.map((name, index) => ({
-            id: Date.now().toString(36) + Math.random().toString(36).substring(2) + name.slice(0, 3) + index,
-            name: name,
-            weight: DEFAULT_WEIGHT,
-            customColor: DEFAULT_CUSTOM_COLOR,
-            isVisibleOnWheel: DEFAULT_IS_VISIBLE
-        }));
+        return CONFIG.defaults.map((line, index) => {
+            // --- ADDED PARSING LOGIC ---
+            let name = line.trim();
+            let weight = DEFAULT_WEIGHT; // Default weight is 1
+            const parts = name.split(':');
+            if (parts.length > 1) {
+                const potentialWeight = parseFloat(parts[parts.length - 1].trim());
+                if (!isNaN(potentialWeight) && potentialWeight > 0) {
+                    weight = potentialWeight;
+                    name = parts.slice(0, -1).join(':').trim(); // Re-join in case name had colons
+                }
+            }
+            // --- END OF ADDED LOGIC ---
+
+            return {
+                id: Date.now().toString(36) + Math.random().toString(36).substring(2) + name.slice(0, 3) + index,
+                name: name, // Now this is the correct name
+                weight: weight, // And this is the correct weight
+                customColor: DEFAULT_CUSTOM_COLOR,
+                isVisibleOnWheel: DEFAULT_IS_VISIBLE
+            };
+        });
     }
     return loadedItems;
 }
@@ -606,7 +622,7 @@ function rotateWheel() {
 }
 
 function startSpin() {
-    if (activeTab === 'entries') updateItemsArrayAndDisplay('input_spin_update');
+    updateItemsArrayAndDisplay('input_spin_update');
     const spinnableItems = items.filter(item => item.id !== PLACEHOLDER_ID && item.isVisibleOnWheel);
     if (spinnableItems.length === 0 || isSpinning) {
         if(spinnableItems.length === 0) resultDisplay.textContent = "Add items to spin!";
@@ -639,6 +655,7 @@ function startSpin() {
     }) || spinnableItems[spinnableItems.length - 1];
 
     currentWinner = winningItemForSpin.name;
+    console.log(`[DEBUG] Spin Started. Winner calculated as: ${currentWinner}`); // LOG 1
 
     let startAngleOfWinningSegmentDeg = 0;
     for (const item of spinnableItems) {
@@ -679,6 +696,7 @@ function stopRotateWheel(error = false, errorMessage = "") {
         resultsList.push(currentWinner);
         updateCounts();
         if (activeTab === 'results') resultsListArea.textContent = resultsList.join('\n');
+        console.log(`[DEBUG] Spin Stopped. Modal will show winner: ${currentWinner}`); // LOG 2
         showModal(currentWinner);
         triggerCelebration();
     } else {
