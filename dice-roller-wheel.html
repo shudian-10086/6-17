@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Truth or Dare Wheel - Wheel Decide</title>
-    <meta name="description" content="Welcome to the Truth Or Dare Wheel! This tool is designed to bring a new level of random, chaotic fun to your favorite party game.">
+    <title>Dice Roller Wheel - Wheel Decide</title>
+    <meta name="description" content="A simple and fun way to roll a standard six-sided die. Perfect for board games, classroom activities, or any time you need a random number from 1 to 6.">
 
-    <meta property="og:title" content="Truth Or Dare Wheel - Wheel Decide">
-    <meta property="og:description" content="Welcome to the Truth Or Dare Wheel! This tool is designed to bring a new level of random, chaotic fun to your favorite party game.">
+    <meta property="og:title" content="Dice Roller Wheel - Wheel Decide">
+    <meta property="og:description" content="A simple and fun way to roll a standard six-sided die. Perfect for board games, classroom activities, or any time you need a random number from 1 to 6.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://spinwheelonline.org/truth-or-dare-wheel.html"> 
+    <meta property="og:url" content="https://spinwheelonline.org/dice-roller-wheel.html"> 
     <meta property="og:image" content="./static/img/namepickerwheel-1.png">
-    <meta property="og:image:alt" content="Truth Or Dare Wheel - Wheel Decide">
+    <meta property="og:image:alt" content="Dice Roller Wheel - Wheel Decide">
     <meta property="og:site_name" content="Spin The Wheel">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Truth Or Dare Wheel - Wheel Decide">
-    <meta name="twitter:description" content="Welcome to the Truth Or Dare Wheel! This tool is designed to bring a new level of random, chaotic fun to your favorite party game.">
+    <meta name="twitter:title" content="Dice Roller Wheel - Wheel Decide">
+    <meta name="twitter:description" content="A simple and fun way to roll a standard six-sided die. Perfect for board games, classroom activities, or any time you need a random number from 1 to 6.">
     <meta name="twitter:image" content="./static/img/namepickerwheel-1.png">
 
-    <link rel="canonical" href="https://spinwheelonline.org/truth-or-dare-wheel.html">
+    <link rel="canonical" href="https://spinwheelonline.org/dice-roller-wheel.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
@@ -72,7 +72,7 @@
                     <div class="header-actions">
                         <div class="hide-controls-checkbox">
                             <input type="checkbox" id="hideControlsCheckbox">
-                            <label for="hideControlsCheckbox" id="hideControlsLabel">Hide</label>
+                            <label for="hideControlsLabel">Hide</label>
                         </div>
                         <button id="advancedSettingsButton" class="icon-button" title="Advanced Settings">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
@@ -155,7 +155,7 @@
                     </button>
                     <input type="file" id="fileInput" accept=".txt" style="display: none;">
                 </div>
-                <textarea id="itemsInput" rows="7" placeholder="Enter one item per line... (e.g., Apple or Banana : 2 for weight)"></textarea>
+                <textarea id="itemsInput" rows="7" placeholder="Enter numbers or custom die faces..."></textarea>
                 <div id="resultsListArea" placeholder="Results will appear here..."></div>
                  <div class="theme-selector-container">
                     <label for="colorThemeSelect">Color Theme:</label>
@@ -165,7 +165,7 @@
                     <button id="updateButton">Update Wheel</button>
                     <button id="spinButton">Spin!</button>
                 </div>
-                <div class="result-display" id="resultDisplay">Spin to select!</div>
+                <div class="result-display" id="resultDisplay">Spin to roll the die!</div>
             </div>
         </div>
         <button id="showControlsButton">Show Controls</button>
@@ -175,10 +175,10 @@
     <div class="modal-overlay" id="winnerModalOverlay">
         <div class="modal" id="winnerModal">
             <div class="modal-content">
-                <div class="modal-title-main">Congratulations!</div>
+                <div class="modal-title-main">You Rolled...</div>
                 <div class="winner-name" id="modalWinnerName">Winner Name</div>
                 <div class="modal-actions">
-                    <button class="modal-button-style delete" id="modalRemoveButton">Delete Winner</button>
+                    <button class="modal-button-style delete" id="modalRemoveButton" style="display:none;">Delete Winner</button>
                     <button class="modal-button-style close" id="modalCloseButton">Close</button>
                 </div>
             </div>
@@ -225,9 +225,8 @@
          </a>
 
         <a href="magic-8-ball-wheel.html" class="trending-link">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.868-1.455L15 7.5m5.25 3.75L15 7.5m0 0L9.75 11.25m5.25-3.75L9.75 3.75m0 0L4.5 7.5m5.25-3.75L4.5 11.25m0 0L2.25 9.75M15 12l-3 3m0 0l-3-3m3 3V15" />
-            </svg>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--emojione" preserveAspectRatio="xMidYMid meet" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><circle cx="32" cy="32" r="30" fill="#333"></circle><ellipse transform="rotate(-39.592 36.265 24.268)" cx="36.3" cy="24.3" rx="13.1" ry="13.9" fill="#f5f5f5"></ellipse><path d="M45.3 23.2c1.8 2.9.8 6.3-2.9 8.6s-7.2 1.7-9-1.2c-1.1-1.8-1.1-3.8 0-5.6c-1.7 0-3.1-.7-4.1-2.2c-1.7-2.7-.7-6 2.5-7.9c3.1-1.9 6.5-1.4 8.2 1.3c1 1.6 1 3.2.2 4.6c2.1-.3 3.9.6 5.1 2.4m-3.1 1.6c-.9-1.5-2.9-1.9-4.6-.8c-1.8 1.1-2.3 3-1.4 4.5c1 1.6 2.9 2 4.7.9c1.7-1.1 2.2-3.1 1.3-4.6M32 21.3c.9 1.4 2.7 1.9 4.3.8c1.6-1 2-2.8 1.1-4.2c-.9-1.4-2.7-1.8-4.3-.8c-1.5 1-1.9 2.7-1.1 4.2" fill="#3e4347"></path></g></svg>
+
             <span>Magic 8-Ball Wheel</span>
         </a>
 
@@ -253,138 +252,48 @@
      </div>
  </div>
 </div>
+
         <div class="manual-section-wrapper" style="margin-bottom:0;">
         <div id="user-manual-main" class="manual-section">
-     <h2>How to Use the Truth Or Dare Wheel</h2>
+            <h2>How to Use the Dice Roller Wheel</h2>
 
-     <h3 id="introduction">1. Introduction</h3>
-     <p>Welcome to the Truth Or Dare Wheel! This tool is designed to bring a new level of random, chaotic fun to your favorite party game. Instead of thinking up questions
-      or dares on the spot, simply load your lists, spin the wheel, and let fate decide! It's perfect for parties, social gatherings, and icebreaker events.</p>
-     <div class="placeholder-image">
-         <img src="./static/img/namepickerwheel-1.png" alt="The main interface of the Truth Or Dare Wheel">
-         <p>The main Truth Or Dare Wheel interface</p>
-     </div>
+            <h3 id="introduction">1. Introduction</h3>
+            <p>Need to roll a die but can't find one? The Dice Roller Wheel is a virtual six-sided die, ready for any occasion. It's perfect for board games, educational purposes, or any time you need a quick random number from 1 to 6.</p>
+            <div class="placeholder-image">
+                <img src="./static/img/namepickerwheel-1.png" alt="The main interface of the Dice Roller Wheel">
+                <p>The Dice Roller Wheel interface</p>
+            </div>
 
-    <h3 id="gameplay-setup">2. Gameplay Setup: Managing Truths & Dares</h3>
-    <p>The key to a great game is having great lists. Since the wheel uses one list at a time, the best way to play is by preparing separate text files for your truths
-      and dares.</p>
-    <ol>
-        <li>Create two plain text files on your computer: <code>truths.txt</code> and <code>dares.txt</code>.</li>
-        <li>In each file, write one entry per line. For example, in <code>truths.txt</code>:
-            <br>
-            <code>What's the most embarrassing thing you've ever done?</code><br>
-            <code>If you could be invisible for a day, what would you do?</code>
-        </li>
-        <li>You can even add weights to make some options more likely! For a dare that's extra spicy, you could write: <code>Sing everything you say for the next 10
-      minutes : 3</code>. This dare will have three times the chance of being selected.</li>
-    </ol>
-    <p>Using the <strong>📥 Import</strong> and <strong>📤 Export</strong> buttons is the recommended way to quickly switch between your lists during the game.</p>
-    <div class="placeholder-image">
-        <img src="./static/img/shuffle-8.png" alt="Import and Export buttons are key for managing lists">
-        <p>Use Import/Export to swap between Truths and Dares</p>
-    </div>
-
-    <h3 id="gameplay-flow">3. Suggested Gameplay Flow</h3>
-    <p>Here is a recommended way to play the game for maximum fun and fairness:</p>
-    <ol>
-        <li><strong>Create a Player Wheel:</strong> First, enter the names of all players into the "Entries" text area and spin to see who goes first. Let's say the
-      winner is "Player A".</li>
-        <li><strong>Choose Truth or Dare:</strong> Player A now asks the person to their left (Player B), "Truth or Dare?".</li>
-        <li><strong>Load the Correct List:</strong> If Player B chooses "Dare", click the <strong>📥 Import</strong> button and select your <code>dares.txt</code> file.
-      If they choose "Truth", import your <code>truths.txt</code> file. The wheel will instantly update with the chosen list.</li>
-        <li><strong>Spin for the Task:</strong> Click <strong>"Spin!"</strong> to select a random task for Player B.</li>
-        <li><strong>Remove the Task:</strong> After the task is revealed, a "Congratulations!" modal will appear. Click the <strong>"Delete Winner"</strong> button. This
-      removes the task from the list, ensuring it won't be selected again in this game session. This is crucial for keeping the game fresh!</li>
-        <li><strong>Continue:</strong> Now it's Player B's turn to spin the Player Wheel (or simply ask the person to their left) and continue the cycle.</li>
-    </ol>
-    <div class="placeholder-image">
-        <img src="./static/img/winner-modal-13.png" alt="The Winner Modal with the important 'Delete Winner' button">
-        <p>Always use "Delete Winner" to remove a completed task</p>
-    </div>
-    <h3 id="customization">4. Customizing Your Wheel</h3>
-    <p>Just like the standard wheel, you can customize the look and feel to match your party's vibe!</p>
-    <ul>
-        <li><strong>Color Themes:</strong> Use the "Color Theme" dropdown to select a palette.</li>
-        <li><strong>Advanced Settings (⚙️)</strong> Click the gear icon to access more options.
+            <h3 id="how-to-use">2. How to Roll</h3>
+            <p>Using the wheel is simpler than shaking a real die:</p>
+            <ol>
+                <li><strong>It's Ready to Go:</strong> The wheel is already set up with numbers 1 through 6.</li>
+                <li><strong>Spin to Roll:</strong> Click the big <strong>"Spin!"</strong> button or press the center of the wheel.</li>
+                <li><strong>See Your Result:</strong> The wheel will spin and randomly land on your number.</li>
+            </ol>
+            
+            <h3 id="customization">3. Custom Dice</h3>
+            <p>You can easily change the wheel to simulate different kinds of dice.</p>
             <ul>
-                <li><strong>Enable Sounds:</strong> Turn on sound effects for a more immersive experience.</li>
-                <li><strong>Spin Duration:</strong> Make the spin longer for more suspense!</li>
-                <li><strong>Fonts & Colors:</strong> Change the font, font size, and even set custom colors for specific segments on the wheel.</li>
+                <li><strong>Create a D20:</strong> For role-playing games, go to the "Entries" tab and type the numbers 1 through 20, each on a new line.</li>
+                <li><strong>Simulate Two Dice:</strong> You can spin the wheel twice to simulate rolling two dice.</li>
+                <li><strong>Custom Faces:</strong> You can even replace the numbers with words or symbols to create your own unique randomizer.</li>
             </ul>
-        </li>
-    </ul>
-    <hr>
-            <p><em>Enjoy using Truth Or Dare Wheel - Wheel Decide!</em></p>
+            <hr>
+            <p><em>May your rolls be ever in your favor!</em></p>
         </div></div>
-<!-- START: ADDED USE CASES SECTION -->
-<div class="use-cases-section-wrapper container" id="new-section" style="display:none;">
-    <div class="w1080">
-    <h2>Spin The Wheel to make random choices</h2>
-    <div class="use-cases-grid">
 
-        <div class="use-case-card">
-            <div class="use-case-icon">🍽️</div>
-            <h3>What to Eat</h3>
-            <p>Can't decide? Let Spin the wheel help you choose your next meal and end daily dilemmas!</p>
-        </div>
-
-        <div class="use-case-card">
-            <div class="use-case-icon">🎲</div>
-            <h3>Truth or Dare</h3>
-            <p>Truth or Dare, or picking the next party game – let Spin the wheel add random fun to your gatherings.</p>
-        </div>
-
-        <div class="use-case-card">
-            <div class="use-case-icon">🧑‍🏫</div>
-            <h3>Random Name Picker</h3>
-            <p>Randomly select students for questions or activities, ensuring fairness and boosting engagement.</p>
-        </div>
-
-        <div class="use-case-card">
-            <div class="use-case-icon">✈️</div>
-            <h3>Wheel Spinner for Travel Destinations</h3>
-            <p>Have a few dream destinations? Use Spin the wheel to make that exciting, random choice!</p>
-        </div>
-
-        <div class="use-case-card">
-            <div class="use-case-icon">🎁</div>
-            <h3>Reward Wheel</h3>
-            <p>Give yourself a small, random reward after completing a task to boost motivation and surprise.</p>
-        </div>
-
-        <div class="use-case-card">
-            <div class="use-case-icon">🧹</div>
-            <h3>Wheel Of Chores</h3>
-            <p>Make assigning chores less tedious! Spin the wheel for a fun and fair way to decide who does what.</p>
-        </div>
-        
-        </div>
-    </div>
-</div>
-
-
-<div id="faq-section" class="manual-section container" style="display:none;margin-top:20px;">
-    <h2 id="faq-section">Frequently Asked Questions (FAQ)</h2>
+<div id="faq-section" class="manual-section container" style="margin-top:20px;display:none">
+    <h2>Frequently Asked Questions (FAQ)</h2>
     <ul>
-        <li><strong>Q: How do I manage both Truths and Dares with only one input box?</strong><br>
-            A: The best method is to use the <strong>📥 Import</strong> and <strong>📤 Export</strong> buttons. Keep your truths and dares in separate <code>.txt</code>
-      files on your computer. When a player chooses "Truth," you import the truth list. When they choose "Dare," you import the dare list.
+        <li><strong>Q: Is the dice roll truly random?</strong><br>
+            A: Yes. The wheel uses a computational algorithm to ensure the selection is random and that each number has an equal chance of being selected.
         </li>
-        <li><strong>Q: How do we prevent the same dare from being chosen twice?</strong><br>
-            A: After a dare (or truth) is selected, a pop-up window appears. Simply click the <strong>"Delete Winner"</strong> button. This removes the item from the
-      current list for the rest of the game.
+        <li><strong>Q: How can I simulate rolling two dice?</strong><br>
+            A: The easiest way is to spin the wheel twice and add the results together. The "Results" tab will keep track of each spin for you.
         </li>
-        <li><strong>Q: Can I make some dares more likely to be picked? (Weighted Entries)</strong><br>
-            A: Yes! When writing your list, use the format: <code>Task Name : Weight</code>. For example, <code>Do 10 pushups : 2</code> will have double the chance of
-      being selected compared to an item with no weight specified.
-        </li>
-        <li><strong>Q: Will our custom list of dares be saved if we close the browser?</strong><br>
-            A: Yes. The last list you had in the "Entries" text area is automatically saved in your browser's local storage. When you reopen the page, it will be
-      reloaded. To save a specific list permanently, use the <strong>📤 Export</strong> button to save it as a <code>.txt</code> file.
-        </li>
-        <li><strong>Q: Can I change the colors of the wheel?</strong><br>
-            A: Absolutely. You can either choose a pre-made "Color Theme" from the dropdown menu or open the <strong>Advanced Settings (⚙️</strong> to set custom colors
-      for the first 10 segments of your wheel.
+        <li><strong>Q: Can I make a 20-sided die for games like D&D?</strong><br>
+            A: Absolutely. Just go to the "Entries" tab, clear the existing numbers, and type in the numbers 1 through 20, with each number on its own line. Then click "Update Wheel".
         </li>
     </ul>
 </div>
